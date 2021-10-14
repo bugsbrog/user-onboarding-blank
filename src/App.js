@@ -77,7 +77,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <h2>Add a Friend</h2>
+      <h2>Add a Friend 😜</h2>
 
       <Form 
         formVals={formVals}
