@@ -1,29 +1,38 @@
+// imports
 import React from 'react';
 
+// export default
 export default function Form (props) {
     
+// props
     const { formVals, change, submitForm, errors, disabled } = props;
 
+// evt.target and 'checkbox'
     const onChange = evt => {
         const { name, value, checked, type} = evt.target
         const valueToUse = type === 'checkbox' ? checked : value;
 
+// change and valueToUse
         change(name, valueToUse)
     }
 
+// .preventDefault()
     const onSubmit = evt => {
         evt.preventDefault();
         submitForm();
     }
 
+// return
     return (
         <form className= 'Form' onSubmit={onSubmit}>
+            {/* errors */}
             <div className='errors'>
                 <div>{errors.first_name}</div>
                 <div>{errors.last_name}</div>
                 <div>{errors.email}</div>
                 <div>{errors.password}</div>
             </div>
+            {/* FirstName */}
             <div className='firstName'>
                 <label> First: 
                     <input
@@ -34,6 +43,7 @@ export default function Form (props) {
                         placeholder="Enter a first name"
                     />
                 </label>
+                {/* lastName */}
             <div className='lastName'>
                 <label> Last:
                         <input
@@ -44,6 +54,7 @@ export default function Form (props) {
                             placeholder="Enter a last name"
                             />
                         </label>
+                        {/* Email */}
                     <div className='Email'>
                         <label> Email:
                             <input
@@ -54,6 +65,7 @@ export default function Form (props) {
                                 placeholder="Enter an email"
                                 />
                             </label>
+                            {/* password */}
                         <div className='Password'>
                             <label> Password:
                             <input
@@ -64,6 +76,7 @@ export default function Form (props) {
                                 placeholder="Enter a password"
                                 />
                             </label>
+                            {/* Terms of service */}
                         <div className='serviceTerms'>
                             <label> Terms of service:
                             <input
@@ -73,8 +86,9 @@ export default function Form (props) {
                                 onChange={onChange}
                                 />
                             </label>
+                            {/* Submit button */}
                             <div className="submit">
-                                <button disabled={disabled}>Submit</button>
+                                <button id='submitBtn' disabled={disabled}>Submit</button>
                         </div>
                     </div>
                 </div>

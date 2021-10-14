@@ -1,11 +1,15 @@
 * {
   box-sizing: border-box;
 }
+
+/* body styles */
 body {
   background-color: rgb(244, 244, 244);
   color: rgb(65, 75, 60);
   font-family: 'Bitter', serif;
 }
+
+/* .container styles */
 .container {
   border: 1px solid rgb(210, 210, 210);
   border-radius: 6px;
@@ -14,36 +18,51 @@ body {
   padding: 16px;
   background-color: white;
 }
+
+/* .container.form styles */
 .container.form {
   display: flex;
   align-items: baseline;
 
+/* @media tag */
   @media (max-width: 650px) {
     flex-direction: column;
   }
 }
+
+/* a styles */
 a {
   font-size: 0.75em;
 }
+
+/* header styles */
 header {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
 }
+
+/* h2 styles */
 h2 {
   color: black;
   display: flex;
   justify-content: center;
 }
+
+/* label styles */
 label {
   display: flex;
   margin-bottom: 16px;
   justify-content: space-between;
 }
+
+/* input styles */
 input[type=text], select {
   height: 1.5rem;
 }
+
+/* button styles */
 button {
   height: 2rem;
   width: 6rem;
@@ -52,20 +71,28 @@ button {
   background-color: white;
   border: 2px solid rgb(30, 220, 20);
 }
+
+/* :disabled styles */
   :disabled {
     color: crimson;
     background-color: white;
     border: 2px solid crimson;
     cursor: not-allowed;
   }
+
+/* .errors styles */
 .errors {
   margin: 8px;
   font-size: 0.7em;
   color: red;
 }
+
+/* .firstName styles */
 .firstName {
   margin: 2rem
 }
+
+/* .submit styles */
 .submit {
   display: flex;
   justify-content: center;
